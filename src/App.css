@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+:root {
+    --font: 'Ubuntu', sans-serif;
+    --background: #212121;
+    --white: #EEEEEE;
+    --yellow: #F9D371;
+    --purple: #8843F2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+    scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    background-color: var(--background);
+    color: var(--white);
+    overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.note {
+    list-style: none;
+    text-decoration: none;
+    color: #111;
+    display: block;
+    height: 15em;
+    width: 15em;
+    padding: 1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    margin: 1em;
+    float: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note h2 {
+    font-size:120%;
+    font-weight:bold;
+    padding-bottom:10px;
+}
+
+.note p {
+    font-family:"Reenie Beanie",arial,sans-serif;
+    font-size:160%;
+}
+
+.note-button-div {
+    float: right;
+}
+
+.note-button {
+    background: transparent;
+    border: none !important;
+}
+
+.normalColor {
+    background-color: var(--yellow);
+}
+
+.importantColor {
+    background-color: var(--purple);
+}
+
+@media (max-width: 425px) {
+    .note {
+        margin: 1em auto;
+    }
 }
